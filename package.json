@@ -23,7 +23,7 @@
     "codemirror": "^5.47.0",
     "driver.js": "^0.9.6",
     "echarts": "^4.2.1",
-    "element-ui": "^2.8.2",
+    "element-ui": "^2.9.1",
     "file-saver": "^2.0.2",
     "fuse.js": "^3.4.4",
     "js-cookie": "^2.2.0",
