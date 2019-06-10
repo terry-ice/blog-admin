@@ -62,7 +62,7 @@
     "@types/js-cookie": "^2.2.2",
     "@types/jszip": "^3.1.6",
     "@types/mockjs": "^1.0.2",
-    "@types/nprogress": "^0.0.29",
+    "@types/nprogress": "^0.2.0",
     "@types/sortablejs": "^1.7.2",
     "@types/tinymce": "^4.5.22",
     "@types/webpack-env": "^1.13.9",
