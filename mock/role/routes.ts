@@ -85,61 +85,61 @@ export const constantRoutes = [
 ]
 
 export const asyncRoutes = [
-  {
-    path: '/permission',
-    component: 'Layout',
-    redirect: '/permission/index',
-    meta: {
-      title: 'permission',
-      icon: 'lock',
-      roles: ['admin', 'editor'],
-      alwaysShow: true
-    },
-    children: [
-      {
-        path: 'page',
-        component: 'views/permission/page',
-        name: 'PagePermission',
-        meta: {
-          title: 'pagePermission',
-          roles: ['admin']
-        }
-      },
-      {
-        path: 'directive',
-        component: 'views/permission/directive',
-        name: 'DirectivePermission',
-        meta: {
-          title: 'directivePermission'
-        }
-      },
-      {
-        path: 'role',
-        component: 'views/permission/role',
-        name: 'RolePermission',
-        meta: {
-          title: 'rolePermission',
-          roles: ['admin']
-        }
-      }
-    ]
-  },
-  {
-    path: '/icon',
-    component: 'Layout',
-    children: [
-      {
-        path: 'index',
-        component: 'views/icons/index',
-        name: 'Icons',
-        meta: {
-          title: 'icons',
-          icon: 'icon',
-          noCache: true
-        }
-      }
-    ]
-  },
+  // {
+  //   path: '/permission',
+  //   component: 'Layout',
+  //   redirect: '/permission/index',
+  //   meta: {
+  //     title: 'permission',
+  //     icon: 'lock',
+  //     roles: ['admin', 'editor'],
+  //     alwaysShow: true
+  //   },
+  //   children: [
+  //     {
+  //       path: 'page',
+  //       component: 'views/permission/page',
+  //       name: 'PagePermission',
+  //       meta: {
+  //         title: 'pagePermission',
+  //         roles: ['admin']
+  //       }
+  //     },
+  //     {
+  //       path: 'directive',
+  //       component: 'views/permission/directive',
+  //       name: 'DirectivePermission',
+  //       meta: {
+  //         title: 'directivePermission'
+  //       }
+  //     },
+  //     {
+  //       path: 'role',
+  //       component: 'views/permission/role',
+  //       name: 'RolePermission',
+  //       meta: {
+  //         title: 'rolePermission',
+  //         roles: ['admin']
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/icon',
+  //   component: 'Layout',
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: 'views/icons/index',
+  //       name: 'Icons',
+  //       meta: {
+  //         title: 'icons',
+  //         icon: 'icon',
+  //         noCache: true
+  //       }
+  //     }
+  //   ]
+  // },
   {
     path: '/components',
     component: 'Layout',
@@ -236,141 +236,141 @@ export const asyncRoutes = [
       }
     ]
   },
-  {
-    path: '/charts',
-    component: 'Layout',
-    redirect: 'noredirect',
-    name: 'Charts',
-    meta: {
-      title: 'charts',
-      icon: 'chart'
-    },
-    children: [
-      {
-        path: 'bar-chart',
-        component: 'views/charts/bar-chart',
-        name: 'BarChart',
-        meta: {
-          title: 'barChart',
-          noCache: true
-        }
-      },
-      {
-        path: 'line-chart',
-        component: 'views/charts/line-chart',
-        name: 'LineChart',
-        meta: {
-          title: 'lineChart',
-          noCache: true
-        }
-      },
-      {
-        path: 'mixedchart',
-        component: 'views/charts/mixed-chart',
-        name: 'MixedChart',
-        meta: {
-          title: 'mixedChart',
-          noCache: true
-        }
-      }
-    ]
-  },
-  {
-    path: '/nested',
-    component: 'Layout',
-    redirect: '/nested/menu1/menu1-1',
-    name: 'Nested',
-    meta: {
-      title: 'nested',
-      icon: 'nested'
-    },
-    children: [
-      {
-        path: 'menu1',
-        component: 'views/nested/menu1/index',
-        redirect: '/nested/menu1/menu1-1',
-        name: 'Menu1',
-        meta: { title: 'menu1' },
-        children: [
-          {
-            path: 'menu1-1',
-            component: 'views/nested/menu1/menu1-1/index',
-            name: 'Menu1-1',
-            meta: { title: 'menu1-1' }
-          },
-          {
-            path: 'menu1-2',
-            component: 'views/nested/menu1/menu1-2/index',
-            name: 'Menu1-2',
-            redirect: '/nested/menu1/menu1-2/menu1-2-1',
-            meta: { title: 'menu1-2' },
-            children: [
-              {
-                path: 'menu1-2-1',
-                component: 'views/nested/menu1/menu1-2/menu1-2-1/index',
-                name: 'Menu1-2-1',
-                meta: { title: 'menu1-2-1' }
-              },
-              {
-                path: 'menu1-2-2',
-                component: 'views/nested/menu1/menu1-2/menu1-2-2/index',
-                name: 'Menu1-2-2',
-                meta: { title: 'menu1-2-2' }
-              }
-            ]
-          },
-          {
-            path: 'menu1-3',
-            component: 'views/nested/menu1/menu1-3/index',
-            name: 'Menu1-3',
-            meta: { title: 'menu1-3' }
-          }
-        ]
-      },
-      {
-        path: 'menu2',
-        name: 'Menu2',
-        component: 'views/nested/menu2/index',
-        meta: { title: 'menu2' }
-      }
-    ]
-  },
-  {
-    path: '/table',
-    component: 'Layout',
-    redirect: '/table/complex-table',
-    name: 'Table',
-    meta: {
-      title: 'table',
-      icon: 'table'
-    },
-    children: [
-      {
-        path: 'dynamic-table',
-        component: 'views/table/dynamic-table/index',
-        name: 'DynamicTable',
-        meta: { title: 'dynamicTable' }
-      },
-      {
-        path: 'draggable-table',
-        component: 'views/table/draggable-table',
-        name: 'DraggableTable',
-        meta: { title: 'draggableTable' }
-      },
-      {
-        path: 'inline-edit-table',
-        component: 'views/table/inline-edit-table',
-        name: 'InlineEditTable',
-        meta: { title: 'inlineEditTable' }
-      },
-      {
-        path: 'complex-table',
-        component: 'views/table/complex-table',
-        name: 'ComplexTable',
-        meta: { title: 'complexTable' }
-      }
-    ]
-  },
+  // {
+  //   path: '/charts',
+  //   component: 'Layout',
+  //   redirect: 'noredirect',
+  //   name: 'Charts',
+  //   meta: {
+  //     title: 'charts',
+  //     icon: 'chart'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'bar-chart',
+  //       component: 'views/charts/bar-chart',
+  //       name: 'BarChart',
+  //       meta: {
+  //         title: 'barChart',
+  //         noCache: true
+  //       }
+  //     },
+  //     {
+  //       path: 'line-chart',
+  //       component: 'views/charts/line-chart',
+  //       name: 'LineChart',
+  //       meta: {
+  //         title: 'lineChart',
+  //         noCache: true
+  //       }
+  //     },
+  //     {
+  //       path: 'mixedchart',
+  //       component: 'views/charts/mixed-chart',
+  //       name: 'MixedChart',
+  //       meta: {
+  //         title: 'mixedChart',
+  //         noCache: true
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/nested',
+  //   component: 'Layout',
+  //   redirect: '/nested/menu1/menu1-1',
+  //   name: 'Nested',
+  //   meta: {
+  //     title: 'nested',
+  //     icon: 'nested'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'menu1',
+  //       component: 'views/nested/menu1/index',
+  //       redirect: '/nested/menu1/menu1-1',
+  //       name: 'Menu1',
+  //       meta: { title: 'menu1' },
+  //       children: [
+  //         {
+  //           path: 'menu1-1',
+  //           component: 'views/nested/menu1/menu1-1/index',
+  //           name: 'Menu1-1',
+  //           meta: { title: 'menu1-1' }
+  //         },
+  //         {
+  //           path: 'menu1-2',
+  //           component: 'views/nested/menu1/menu1-2/index',
+  //           name: 'Menu1-2',
+  //           redirect: '/nested/menu1/menu1-2/menu1-2-1',
+  //           meta: { title: 'menu1-2' },
+  //           children: [
+  //             {
+  //               path: 'menu1-2-1',
+  //               component: 'views/nested/menu1/menu1-2/menu1-2-1/index',
+  //               name: 'Menu1-2-1',
+  //               meta: { title: 'menu1-2-1' }
+  //             },
+  //             {
+  //               path: 'menu1-2-2',
+  //               component: 'views/nested/menu1/menu1-2/menu1-2-2/index',
+  //               name: 'Menu1-2-2',
+  //               meta: { title: 'menu1-2-2' }
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           path: 'menu1-3',
+  //           component: 'views/nested/menu1/menu1-3/index',
+  //           name: 'Menu1-3',
+  //           meta: { title: 'menu1-3' }
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       path: 'menu2',
+  //       name: 'Menu2',
+  //       component: 'views/nested/menu2/index',
+  //       meta: { title: 'menu2' }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/table',
+  //   component: 'Layout',
+  //   redirect: '/table/complex-table',
+  //   name: 'Table',
+  //   meta: {
+  //     title: 'table',
+  //     icon: 'table'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'dynamic-table',
+  //       component: 'views/table/dynamic-table/index',
+  //       name: 'DynamicTable',
+  //       meta: { title: 'dynamicTable' }
+  //     },
+  //     {
+  //       path: 'draggable-table',
+  //       component: 'views/table/draggable-table',
+  //       name: 'DraggableTable',
+  //       meta: { title: 'draggableTable' }
+  //     },
+  //     {
+  //       path: 'inline-edit-table',
+  //       component: 'views/table/inline-edit-table',
+  //       name: 'InlineEditTable',
+  //       meta: { title: 'inlineEditTable' }
+  //     },
+  //     {
+  //       path: 'complex-table',
+  //       component: 'views/table/complex-table',
+  //       name: 'ComplexTable',
+  //       meta: { title: 'complexTable' }
+  //     }
+  //   ]
+  // },
   {
     path: '/example',
     component: 'Layout',
@@ -412,202 +412,202 @@ export const asyncRoutes = [
       }
     ]
   },
-  {
-    path: '/tab',
-    component: 'Layout',
-    children: [
-      {
-        path: 'index',
-        component: 'views/tab/index',
-        name: 'Tab',
-        meta: {
-          title: 'tab',
-          icon: 'tab'
-        }
-      }
-    ]
-  },
-  {
-    path: '/error',
-    component: 'Layout',
-    redirect: 'noredirect',
-    name: 'ErrorPages',
-    meta: {
-      title: 'errorPages',
-      icon: '404'
-    },
-    children: [
-      {
-        path: '401',
-        component: 'views/error-page/401',
-        name: 'Page401',
-        meta: {
-          title: 'page401',
-          noCache: true
-        }
-      },
-      {
-        path: '404',
-        component: 'views/error-page/404',
-        name: 'Page404',
-        meta: {
-          title: 'page404',
-          noCache: true
-        }
-      }
-    ]
-  },
-  {
-    path: '/error-log',
-    component: 'Layout',
-    redirect: 'noredirect',
-    children: [
-      {
-        path: 'log',
-        component: 'views/error-log/index',
-        name: 'ErrorLog',
-        meta: {
-          title: 'errorLog',
-          icon: 'bug'
-        }
-      }
-    ]
-  },
-  {
-    path: '/excel',
-    component: 'Layout',
-    redirect: '/excel/export-excel',
-    name: 'Excel',
-    meta: {
-      title: 'excel',
-      icon: 'excel'
-    },
-    children: [
-      {
-        path: 'export-excel',
-        component: 'views/excel/export-excel',
-        name: 'ExportExcel',
-        meta: { title: 'exportExcel' }
-      },
-      {
-        path: 'export-selected-excel',
-        component: 'views/excel/select-excell',
-        name: 'SelectExcel',
-        meta: { title: 'selectExcel' }
-      },
-      {
-        path: 'export-merge-header',
-        component: 'views/excel/merge-header',
-        name: 'MergeHeader',
-        meta: { title: 'mergeHeader' }
-      },
-      {
-        path: 'upload-excel',
-        component: 'views/excel/upload-excel',
-        name: 'UploadExcel',
-        meta: { title: 'uploadExcel' }
-      }
-    ]
-  },
-  {
-    path: '/zip',
-    component: 'Layout',
-    redirect: '/zip/download',
-    meta: {
-      title: 'zip',
-      icon: 'zip',
-      alwaysShow: true
-    },
-    children: [
-      {
-        path: 'download',
-        component: 'views/zip/index',
-        name: 'ExportZip',
-        meta: { title: 'exportZip' }
-      }
-    ]
-  },
-  {
-    path: '/pdf',
-    component: 'Layout',
-    redirect: '/pdf/index',
-    children: [
-      {
-        path: 'index',
-        component: 'views/pdf/index',
-        name: 'PDF',
-        meta: {
-          title: 'pdf',
-          icon: 'pdf'
-        }
-      }
-    ]
-  },
-  {
-    path: '/pdf-download-example',
-    component: 'views/pdf/download',
-    meta: { hidden: true }
-  },
-  {
-    path: '/theme',
-    component: 'Layout',
-    redirect: 'noredirect',
-    children: [
-      {
-        path: 'index',
-        component: 'views/theme/index',
-        name: 'Theme',
-        meta: {
-          title: 'theme',
-          icon: 'theme'
-        }
-      }
-    ]
-  },
-  {
-    path: '/clipboard',
-    component: 'Layout',
-    redirect: 'noredirect',
-    children: [
-      {
-        path: 'index',
-        component: 'views/clipboard/index',
-        name: 'Clipboard',
-        meta: {
-          title: 'clipboard',
-          icon: 'clipboard'
-        }
-      }
-    ]
-  },
-  {
-    path: '/i18n',
-    component: 'Layout',
-    children: [
-      {
-        path: 'index',
-        component: 'views/i18n-demo/index',
-        name: 'I18n',
-        meta: {
-          title: 'i18n',
-          icon: 'international'
-        }
-      }
-    ]
-  },
-  {
-    path: 'external-link',
-    component: 'Layout',
-    children: [
-      {
-        path: 'https://github.com/terry-ice/blog-admin.git',
-        meta: {
-          title: 'externalLink',
-          icon: 'link'
-        }
-      }
-    ]
-  },
+  // {
+  //   path: '/tab',
+  //   component: 'Layout',
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: 'views/tab/index',
+  //       name: 'Tab',
+  //       meta: {
+  //         title: 'tab',
+  //         icon: 'tab'
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/error',
+  //   component: 'Layout',
+  //   redirect: 'noredirect',
+  //   name: 'ErrorPages',
+  //   meta: {
+  //     title: 'errorPages',
+  //     icon: '404'
+  //   },
+  //   children: [
+  //     {
+  //       path: '401',
+  //       component: 'views/error-page/401',
+  //       name: 'Page401',
+  //       meta: {
+  //         title: 'page401',
+  //         noCache: true
+  //       }
+  //     },
+  //     {
+  //       path: '404',
+  //       component: 'views/error-page/404',
+  //       name: 'Page404',
+  //       meta: {
+  //         title: 'page404',
+  //         noCache: true
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/error-log',
+  //   component: 'Layout',
+  //   redirect: 'noredirect',
+  //   children: [
+  //     {
+  //       path: 'log',
+  //       component: 'views/error-log/index',
+  //       name: 'ErrorLog',
+  //       meta: {
+  //         title: 'errorLog',
+  //         icon: 'bug'
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/excel',
+  //   component: 'Layout',
+  //   redirect: '/excel/export-excel',
+  //   name: 'Excel',
+  //   meta: {
+  //     title: 'excel',
+  //     icon: 'excel'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'export-excel',
+  //       component: 'views/excel/export-excel',
+  //       name: 'ExportExcel',
+  //       meta: { title: 'exportExcel' }
+  //     },
+  //     {
+  //       path: 'export-selected-excel',
+  //       component: 'views/excel/select-excell',
+  //       name: 'SelectExcel',
+  //       meta: { title: 'selectExcel' }
+  //     },
+  //     {
+  //       path: 'export-merge-header',
+  //       component: 'views/excel/merge-header',
+  //       name: 'MergeHeader',
+  //       meta: { title: 'mergeHeader' }
+  //     },
+  //     {
+  //       path: 'upload-excel',
+  //       component: 'views/excel/upload-excel',
+  //       name: 'UploadExcel',
+  //       meta: { title: 'uploadExcel' }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/zip',
+  //   component: 'Layout',
+  //   redirect: '/zip/download',
+  //   meta: {
+  //     title: 'zip',
+  //     icon: 'zip',
+  //     alwaysShow: true
+  //   },
+  //   children: [
+  //     {
+  //       path: 'download',
+  //       component: 'views/zip/index',
+  //       name: 'ExportZip',
+  //       meta: { title: 'exportZip' }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/pdf',
+  //   component: 'Layout',
+  //   redirect: '/pdf/index',
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: 'views/pdf/index',
+  //       name: 'PDF',
+  //       meta: {
+  //         title: 'pdf',
+  //         icon: 'pdf'
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/pdf-download-example',
+  //   component: 'views/pdf/download',
+  //   meta: { hidden: true }
+  // },
+  // {
+  //   path: '/theme',
+  //   component: 'Layout',
+  //   redirect: 'noredirect',
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: 'views/theme/index',
+  //       name: 'Theme',
+  //       meta: {
+  //         title: 'theme',
+  //         icon: 'theme'
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/clipboard',
+  //   component: 'Layout',
+  //   redirect: 'noredirect',
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: 'views/clipboard/index',
+  //       name: 'Clipboard',
+  //       meta: {
+  //         title: 'clipboard',
+  //         icon: 'clipboard'
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/i18n',
+  //   component: 'Layout',
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: 'views/i18n-demo/index',
+  //       name: 'I18n',
+  //       meta: {
+  //         title: 'i18n',
+  //         icon: 'international'
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: 'external-link',
+  //   component: 'Layout',
+  //   children: [
+  //     {
+  //       path: 'https://github.com/terry-ice/blog-admin.git',
+  //       meta: {
+  //         title: 'externalLink',
+  //         icon: 'link'
+  //       }
+  //     }
+  //   ]
+  // },
   {
     path: '*',
     redirect: '/404',

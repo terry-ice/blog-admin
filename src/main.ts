@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueApollo from 'vue-apollo'
 
 import 'normalize.css'
 import ElementUI from 'element-ui'
@@ -15,9 +16,12 @@ import '@/permission'
 import '@/utils/error-log'
 import '@/registerServiceWorker'
 import * as filters from '@/filters'
+import apolloClient from '@/apollo/config'
 
 import { mockXHR } from '../mock'
 mockXHR()
+
+Vue.use(VueApollo)
 
 Vue.use(ElementUI, {
   size: AppModule.size, // Set element-ui default size
@@ -28,6 +32,10 @@ Vue.use(SvgIcon, {
   tagName: 'svg-icon',
   defaultWidth: '1em',
   defaultHeight: '1em'
+})
+
+const apolloProvider = new VueApollo({
+  defaultClient: apolloClient
 })
 
 // Register global filter functions
@@ -41,5 +49,6 @@ new Vue({
   router,
   store,
   i18n,
+  apolloProvider,
   render: (h) => h(App)
 }).$mount('#app')

@@ -19,3 +19,5 @@ declare module 'vuedraggable'
 
 // TODO: remove this part after vue2-dropzone has its typescript file
 declare module 'vue2-dropzone'
+
+declare module 'vue-apollo'
